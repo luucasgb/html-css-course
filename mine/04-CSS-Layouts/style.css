@@ -280,3 +280,21 @@ nav p {
   font-style: italic;
   font-size: 18px;
 }
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+/* .clear {
+  clear: both;
+} */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
