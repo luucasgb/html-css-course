@@ -127,6 +127,10 @@ h2 {
   gap: 10px;
 }
 
+.color-box:hover {
+  cursor: pointer;
+}
+
 .black {
   background-color: black;
   padding: 14px 14px;
