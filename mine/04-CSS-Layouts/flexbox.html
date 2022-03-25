@@ -8,25 +8,31 @@
     <style>
       .el--1 {
         background-color: blueviolet;
+        align-self: flex-start;
+        order: 2;
       }
       .el--2 {
         background-color: orangered;
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        height: 250px;
       }
       .el--4 {
         background-color: goldenrod;
       }
       .el--5 {
         background-color: palevioletred;
+        align-self: stretch;
+        order: 1;
       }
       .el--6 {
         background-color: steelblue;
+        order: -1;
       }
       .el--7 {
         background-color: yellow;
+        align-self: flex-end;
       }
       .el--8 {
         background-color: crimson;
@@ -40,6 +46,9 @@
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
     </style>
   </head>
