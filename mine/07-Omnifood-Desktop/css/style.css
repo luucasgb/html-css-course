@@ -13,7 +13,12 @@
 -Line heights:
   Default: 1
   Small: 1.05
+  Medium: 1.2
   Paragraph default: 1.6
+
+-Letter spacing:
+  -0.5px
+  0.75px
 
 ---02 COLOR SYSTEM--------------------------------------------------------
 -Primary:
@@ -21,6 +26,7 @@
 
 -Tints:
   #fdf2e9
+  #fae5d3
     
 -Shades:
   #cf711f
@@ -40,88 +46,6 @@
 -Spacing System (px):
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-*/
-/* ************************** */
-/* GENERAL COMPONENTS SECTION */
-/* ************************** */
-
-.heading-primary {
-  font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -1px;
-  margin-bottom: 3.6rem;
-  color: #333;
-}
-
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-  /* Put transtition on original "state" */
-  transition: background-color 0.3s;
-}
-
-.btn--full:link,
-.btn--full:visited {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.btn--full:hover,
-.btn--full:active {
-  background-color: #cf711f;
-}
-
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555;
-}
-
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #fdf2e9;
-  /* Trick to add border inside of link */
-  box-shadow: inset 0 0 0 3px #fff;
-}
-
-.main-nav-link:link,
-.main-nav-link:visited {
-  /* display: inline-block; */
-  font-size: 1.8rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #333;
-  transition: 0.3s;
-}
-
-.main-nav-link:hover,
-.main-nav-link:active {
-  color: #cf711f;
-}
-
-.main-nav-link.nav-cta:link,
-.main-nav-link.nav-cta:visited {
-  background-color: #e67e22;
-  color: #fff;
-  padding: 1rem 2.4rem;
-  border-radius: 9px;
-  transition: 0.3s;
-}
-
-.nav-cta:hover,
-.nav-cta:active {
-  background-color: #cf711f;
-}
 
 /* ***************************** */
 /******** HEDAER SECTION *********/
@@ -214,6 +138,64 @@
 .delivered-text span {
   font-weight: 700;
   color: #cf711f;
+}
+
+/* *********************************** */
+/******** HOW IT WORKS SECTION *********/
+/* *********************************** */
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-img {
+  width: 35%;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  background-color: #fdf2e9;
+  width: 60%;
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  background-color: #fae5d3;
+  width: 45%;
+  /* 45% of parent's width */
+  padding-bottom: 45%;
+  z-index: -1;
+}
+
+.step-number {
+  color: #ddd;
+  font-weight: 600;
+  font-size: 8.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 
 /* *************************** */
