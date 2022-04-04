@@ -63,25 +63,40 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 4.8rem;
+  position: relative;
 
   /* Because it will be a sticky header */
   height: 9.6rem;
 }
 
-.main-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .main-nav-links {
   display: flex;
   list-style: none;
+  align-items: center;
   gap: 4.8rem;
 }
 
 .omnifood-logo {
   height: 2.2rem;
+}
+
+/* MOBILE */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /* *************************** */
@@ -703,29 +718,5 @@
 
 .footer-link:hover,
 .footer-link:active {
-  color: #555;
-}
-
-/* *************************** */
-/* ****** MAIN SECTION ******* */
-/* *************************** */
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  /* font-size: 10px; */
-  /* 10px / 16px = 0.625 = 62.5% */
-  /* Percentage of user's browser font-size setting */
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  line-height: 1;
-  font-weight: 400;
   color: #555;
 }
