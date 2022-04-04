@@ -1,8 +1,6 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/* REM and EM do not depende on html font-size in media queries! Instead, 1rem == 1em == 16px */
 
-/**************************/
 /* BELOW 1344px (Smaller desktops) */
-/**************************/
 
 @media (max-width: 84em) {
   .hero {
@@ -18,13 +16,11 @@
   }
 }
 
-/**************************/
-/* BELOW 1200px (Landscape Tablets) */
-/**************************/
+/* BELOW 1200px (Landscape tablets) */
 
 @media (max-width: 75em) {
   html {
-    /* 9px / 16px  */
+    /* 9px / 16px = 0.5625 */
     font-size: 56.25%;
   }
 
@@ -45,7 +41,7 @@
     padding: 0 3.2rem;
   }
 
-  .main-nav-list {
+  .main-nav-links {
     gap: 3.2rem;
   }
 
@@ -58,13 +54,11 @@
   }
 }
 
-/**************************/
-/* BELOW 944px (Tablets) */
-/**************************/
+/* BELOW 955px (Tablets) */
 
-@media (max-width: 59em) {
+@media (max-width: 60em) {
   html {
-    /* 8px / 16px = 0.5 = 50% */
+    /* 8px / 16px = 0.5 */
     font-size: 50%;
   }
 
@@ -75,7 +69,7 @@
   }
 
   .hero-text-box,
-  .hero-img-box {
+  .hero-image-box {
     text-align: center;
   }
 
@@ -88,7 +82,7 @@
     margin-top: 3.2rem;
   }
 
-  .logos img {
+  .featured-companies img {
     height: 2.4rem;
   }
 
@@ -109,7 +103,6 @@
   }
 
   .cta {
-    /* 3/5 = 60% + 2/5 = 40% */
     grid-template-columns: 3fr 2fr;
   }
 
@@ -127,7 +120,7 @@
   }
 
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: rgba(255, 255, 255, 0.9);
     position: absolute;
     top: 0;
     left: 0;
@@ -138,19 +131,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
 
-    /* Hide navigation */
-    /* Allows NO transitions at all */
+    /* HIDE NAVIGATION */
+    /* Does not allow transition */
     /* display: none; */
 
-    /* 1) Hide it visually */
+    /* 1. Visually hide */
     opacity: 0;
 
-    /* 2) Make it unaccessible to mouse and keyboard */
+    /* 2. Make it unaccessible to user interaction */
     pointer-events: none;
 
-    /* 3) Hide it from screen readers */
+    /* 3. Hide it from screen readers */
     visibility: hidden;
   }
 
@@ -169,7 +162,7 @@
     display: none;
   }
 
-  .main-nav-list {
+  .main-nav-links {
     flex-direction: column;
     gap: 4.8rem;
   }
@@ -180,11 +173,8 @@
   }
 }
 
-/**************************/
-/* BELOW 704px (Smaller tablets) */
-/**************************/
-
-@media (max-width: 44em) {
+/* BELOW 820px (Smaller Tablets) */
+@media (max-width: 53em) {
   .grid--3-cols,
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
@@ -199,7 +189,7 @@
     margin-bottom: 4.8rem;
   }
 
-  .pricing-plan {
+  .pricing-option {
     width: 100%;
   }
 
@@ -207,23 +197,21 @@
     grid-template-columns: repeat(6, 1fr);
   }
 
-  .logo-col,
-  .address-col {
-    grid-column: span 3;
-  }
-
   .nav-col {
     grid-row: 1;
     grid-column: span 2;
     margin-bottom: 3.2rem;
   }
+
+  .logo-col,
+  .address-col {
+    grid-row: 2;
+    grid-column: span 3;
+  }
 }
 
-/**************************/
-/* BELOW 544px (Phones) */
-/**************************/
-
-@media (max-width: 34em) {
+/* BELOW 640px (Phones) */
+@media (max-width: 40em) {
   .grid {
     row-gap: 4.8rem;
   }
@@ -236,7 +224,7 @@
 
   .btn,
   .btn:link,
-  .btn:visited {
+  .btn:active {
     padding: 2.4rem 1.6rem;
   }
 
@@ -252,20 +240,25 @@
     width: 80%;
   }
 
-  .logos img {
+  .featured-companies img {
     height: 1.2rem;
+  }
+
+  .section-how {
+    padding: 6.4rem 0;
+  }
+
+  .step-img-box {
+    transform: translateY(3.2rem);
   }
 
   .step-img-box:nth-child(2) {
     grid-row: 1;
+    margin-top: 4.8rem;
   }
 
   .step-img-box:nth-child(6) {
     grid-row: 5;
-  }
-
-  .step-img-box {
-    transform: translateY(2.4rem);
   }
 
   .testimonials {
@@ -281,20 +274,29 @@
     grid-template-columns: 1fr;
   }
 
-  .cta-text-box {
-    padding: 3.2rem;
-  }
-
   .cta-img-box {
     height: 32rem;
     grid-row: 1;
   }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
 }
 
-/* 
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+@media (max-width: 22em) {
+  .btn,
+  .btn:link,
+  .btn:active {
+    font-size: 1.4rem;
+    padding: 1.6rem 1.6rem;
+  }
 
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
+  .section-cta {
+    padding: 4.8rem 0 9.6rem;
+  }
+
+  .footer {
+    padding: 9.6rem 0;
+  }
+}
